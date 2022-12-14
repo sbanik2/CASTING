@@ -14,7 +14,7 @@ import math
 from lammps import lammps
 from pymatgen.io.lammps.data import LammpsData
 
-from clusterfun import check_constrains, parm2struc, struc2param
+from CASTING.clusterfun import check_constrains, parm2struc, struc2param
 
 # In[ ]:
 

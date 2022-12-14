@@ -12,13 +12,12 @@ setup(
     description="A continuous action spce tree search for inverse design",
     author="Suvo Banik",
     author_email="sbanik2@uic.edu", 
-    keywords="Crystal structure prediction, Monte Carlo Tree Search, Nano Cluster, Optimization",
     install_requires=[
             "ase>=3.21.1",
             "networkx>=2.0",
             "numpy>=1.23.1",
             "pandas>=1.4.3",
-            "pymatgen>=2022.7.25"
+            "pymatgen>=2022.7.25",
             "scipy>=1.8.0",
     ],
     

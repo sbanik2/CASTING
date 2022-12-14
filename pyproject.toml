@@ -8,6 +8,14 @@ version = "1.0.0"
 authors = [
   { name="Suvo Banik", email="sbanik2@uic.edu" },
 ]
+dependencies = [
+            "ase>=3.21.1",
+            "networkx>=2.0",
+            "numpy>=1.23.1",
+            "pandas>=1.4.3",
+            "pymatgen>=2022.7.25",
+            "scipy>=1.8.0",
+]
 description = "A continuous action space tree search for inverse design (CASTING)"
 readme = "README.md"
 requires-python = ">=3.7"

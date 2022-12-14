@@ -14,7 +14,7 @@ from ase.build import bulk, make_supercell
 from pymatgen.core import Structure
 from scipy.spatial.distance import pdist, squareform
 
-from utilis import DistanceMatrix, get_factors
+from CASTING.utilis import DistanceMatrix, get_factors
 
 
 def random_sub_cluster_sample(A, natoms):
