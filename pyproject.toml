@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CASTING"
+version = "1.0.0"
+authors = [
+  { name="Suvo Banik", email="sbanik2@uic.edu" },
+]
+description = "A continuous action space tree search for inverse design (CASTING)"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
