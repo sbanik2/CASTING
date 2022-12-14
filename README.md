@@ -8,7 +8,7 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the code](#Running-the-code)
-- [Optimization of Gold nanocluster](#Au-nanocluster)
+- [Optimization of Gold nanocluster](#Optimization-of-Gold-nanocluster)
 - [Carbon (C) metastable polymorphs](#Carbon(C)-polymorphs)
 - [Citation](#data-availability)
 - [License](#license)
