@@ -1,6 +1,6 @@
-# ClusterOpt
+# CASTING
 
-<p align="justify"> Implementation of Basin Hopping Global Optimization method for optimization of Atomic nanoclusters. </p>
+<p align="justify"> A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery</p>
 
 
 ## Table of Contents
@@ -8,11 +8,16 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the code](#Running-the-code)
+- [Optimization of Gold nanocluster](#Au-nanocluster)
+- [Carbon (C) metastable polymorphs](#Carbon(C)-polymorphs)
 - [Citation](#data-availability)
 - [License](#license)
 
 ## Introduction
-This package implements the Basin Hopping global optimization method in [scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html) along with [LAMMPS](https://www.lammps.org/) MD (Molecular dynamic simulation) package to find the global minima of atomic nanoclusters (Single or Multicomponent)
+
+A pseudocode implementation of CASTING framework [paper link goes here] for optimization of atomic nanoclusters only. This code uses MCTS (Monte Carlo Tree Search) as base optimizer. 
+Fast and accurate prediction of optimal crystal structure, topology, and microstructures is important for accelerating the design and discovery of new materials. Material properties are strongly correlated to the underlying structure and topology – inverse design is emerging as a powerful tool to discover new and increasingly complex materials that meet targeted functionalities. CASTING provides a unified framework for fast, scalable and accurate design & inverse design of materials.
+
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/ClusterOpt/blob/main/Figs/cluster_opt.png" align="center" height="300" width="300" ></a> </p>
 
@@ -25,6 +30,8 @@ This package requires:
 - [pymatgen](https://pymatgen.org/)
 - [pandas](https://pandas.pydata.org/)
 - [numpy](https://numpy.org/)
+- [networkx](https://networkx.org/)
+- [ase](https://wiki.fysik.dtu.dk/ase/#)
 
 
 ## Installation
@@ -32,122 +39,154 @@ This package requires:
 ### Manual Installation
 [Install the anaconda package](https://docs.anaconda.com/anaconda/install/). Then, 
 ```
-conda env create --name ClusterOpt -f environment.yml
-conda activate ClusterOpt
-git clone https://github.com/sbanik2/ClusterOpt.git
+conda env create --name CASTING
+conda activate CASTING
+git clone https://github.com/sbanik2/CASTING.git
+pip install -r requirement.txt
 python setup.py install
 ```
 
 ### Installation with pypi
 
 ```
-pip install ClusterOpt
+pip install CASTING
 
 ```
-***The package requires python lammps binding to run. First, lammps package needs to be downloaded from  [LAMMPS download](https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python](https://docs.lammps.org/Python_install.html).
+***The package requires python lammps binding to run. First, lammps package needs to be downloaded from [LAMMPS download] (https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python] (https://docs.lammps.org/Python_install.html).
 
 
 ### Running the code
-<p align="justify"> An example of running run directory provided in the example section. First all the parameters crystal and the lammps pair_style and pair_coeff should be set. The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}, the minimum interatomic distances as a pandas data frame with rows and columns belonging to each species in the same order they are mentioned in the composition. E.g.,</p>
+<p align="justify"> First all the parameters crystal (constrains), LAMMPS parameters (pair style, pair coefficient etc.) and the perturbation parameter need to be set.  The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}. In a file (for e.g., RunOpt.py) we define,
+
 
 ``` python
+from CASTING.utilis import r_datafame,get_lattice
+from CASTING.MCTS import MCTS
+from CASTING.clusterfun import createRandomData
+from CASTING.lammpsEvaluate import LammpsEvaluator
+from CASTING.perturb import perturbate
+
+
+# In[6]:
+
+import random
 import numpy as np
-import pandas as pd
-from ClusterOpt.Evaluator import Custom_minimize, LammpsEvaluator
-from ClusterOpt.Structfunc import createRandomData
-from ClusterOpt.utilis import CreateStructure,Status
-from scipy.optimize import basinhopping
-from scipy.optimize import minimize
+
+seed = 12
+
+random.seed(seed)
+np.random.seed(seed)
 
 
-# minimum distance criteria between the atoms
 
-r = pd.DataFrame(np.array([[1.3]]),columns=["Au"],index= ["Au"])
-
-constrains = {     
-        "composition":{"Au":1},
-        "atoms":13,
-        "vpa":[16, 20],
-        "r":r,       
-        }
+# In[9]:
 
 
-lammps_args = {
-        "pair_style" : "pair_style eam",
-        "pair_coeff" : "pair_coeff * * Au.eam",
-        "pad":20
-            }
+r_min = {"Au-Au":2}       # minimum allowed interatomic distance
+r_max = {"Au-Au":4}      # maximum allowed interatomic distance
+box_dim = 50                  # box dimension 
 
-args = (constrains,lammps_args)
+#--------crystal constrains-----------
 
+constrains = {
+    "composition":{"Au":1},
+    "atoms":13,
+    "r_min":r_datafame(r_min),
+    "r_max":r_datafame(r_max),
+    "lattice":get_lattice(box_dim),  
+    }
+
+
+
+
+#-------------perturbation------------
+
+
+pt = {
+    'max_mutation': 0.05,  # mutation  in fraction of  box length
+}
+
+
+
+#-----------------lammps parameters-------------------
+
+lammps_par = {
+    'constrains':constrains,
+    'pair_style': "pair_style eam",
+    'pair_coeff': "pair_coeff * * Au.eam"   # Provide full path of potential file here
+}
+    
 ```
 
-Once the parameters are set, the LammpsEvaluator can be initialized and the basinhopping optimizer can be set for the run
+Once the parameters are set, the evaluator (LAMMPS calculator) & the perturbator is to be initialized and a structure for root node is created.
 
  ``` python
 
-structData = createRandomData(constrains,trials = 1000)
-x0 = structData["parameters"]
+rootdata = createRandomData(constrains,multiplier= 10)
 
+perturb = perturbate(**pt). perturb
+evaluator = LammpsEvaluator(**lammps_par).evaluate 
 
-fun = LammpsEvaluator(constrains,lammps_args).snapshot
-res = minimize(fun, x0, args=args, method=Custom_minimize)
-
-print(res.x,res.fun)
-
-minimizer_kwargs = {"method":Custom_minimize,"args":args}
-
-def print_fun(x, f, accepted):
-    print("at minimum %.2e accepted %d" % (f, int(accepted)))
-
-basinhopping(fun,
-             x0, 
-             niter=1000,
-             T=1.0, 
-             stepsize=0.5, 
-             minimizer_kwargs=minimizer_kwargs, 
-             take_step=None, 
-             accept_test=None, 
-             callback=print_fun, 
-             interval=50, 
-             disp=False, 
-             niter_success=None, 
-             seed=None, 
-            )
 ```
-details of individual hyperparameters for the basin hopping optimizer can be found here [BasinHopping](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.basinhopping.html).
-The optimization produces a "dumpfile.dat" output containing all the crystal parameters and the energy values as the output. The best values and the best crystal structure corresponding to the least energy can be extracted using
+
+Finally, Run MCTS with all the hyperparameters added. details of individual hyperparameters for the optimizer can be found here [the paper link].
         
  ``` python
         
-Status("dumpfile.dat")
-
-CreateStructure("dumpfile.dat","./",nStructure=1)
+MCTS(
+    rootdata,
+    perturb ,
+    evaluator,
+    niterations=2000,
+    headexpand=10,
+    nexpand=3,
+    nsimulate=3,
+    nplayouts=10,
+    exploreconstant=1,
+    maxdepth=12,
+    a=0,
+    selected_node=0,
+)
         
 ```
 
+Run the code 
 
-        
-### Referenece
-   
-1. Wales, D. J., & Doye, J. P. (1997). Global optimization by basin-hopping and the lowest energy structures of Lennard-Jones clusters containing up to 110 atoms. The Journal of Physical Chemistry A, 101(28), 5111-5116.
-2. Wales, D. J., & Scheraga, H. A. (1999). Global optimization of clusters, crystals, and biomolecules. Science, 285(5432), 1368-1372.   
+```
+python RunOpt.py 
+```
+
+The optimization produces a "dumpfile.dat" output containing all the crystal parameters and the energy values as the output.  A script “Createstruct.py” for extracting the structure in POSCAR format is given in the “post” directory. To run this
+
+```
+python Createstruct.py <path-to-extraction-directory> <number-of-structure-to-extract>
+```
+This will extract <number-of-structure-to-extract> number of structures in ascending order of objective.
+
+
+### Optimization of Gold nanocluster
+
+An example optimization of Gold (Au) nanocluster is given in example directory. We have used CASTING to optimize the already known global minima (Sutton-Chen) of 13 atom Au nanocluster (Icosahedral structure).  Details on additional example can be found in [put the paper here]
+
+```
+The gif goes here
+```
+
+### Carbon (C) metastable polymorphs
+
+We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_polymorphs” directory.
+
+```
+Add the C_polymorph figure here
+    ```    
 
 
 ### Citation
 ```
-@article{manna2022learning,
-  title={Learning in continuous action space for developing high dimensional potential energy models},
-  author={Manna, Sukriti and Loeffler, Troy D and Batra, Rohit and Banik, Suvo and Chan, Henry and Varughese, Bilvin and Sasikumar, Kiran and Sternberg, Michael and Peterka, Tom and Cherukara, Mathew J and others},
-  journal={Nature communications},
-  volume={13},
-  number={1},
-  pages={1--10},
-  year={2022},
-  publisher={Nature Publishing Group}
-}
+
 ```
         
 ### License
-ClusterOpt is licensed under the MIT License
+CASTING is licensed under the MIT License
+
 
