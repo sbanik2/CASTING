@@ -1,6 +1,6 @@
-# CASTING
+# CASTING (MCTS
 
-<p align="justify"> A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery</p>
+<p align="justify"> A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework and Materials Discovery</p>
 
 
 ## Table of Contents
