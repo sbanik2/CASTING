@@ -9,7 +9,7 @@
 - [Installation](#installation)
 - [Running the code](#running-the-code)
 - [Optimization of Gold nanocluster](#optimization-of-Gold-nanocluster)
-- [Carbon (C) metastable polymorphs](#carbon-(C)-metastable-polymorphs)
+- [Carbon(C) metastable polymorphs](#carbon-metastable-polymorphs)
 - [Citation](#citation)
 - [License](#license)
 
