@@ -10,7 +10,7 @@
 - [Running the code](#Running-the-code)
 - [Optimization of Gold nanocluster](#Optimization-of-Gold-nanocluster)
 - [Carbon (C) metastable polymorphs](#Carbon-(C)-metastable-polymorphs)
-- [Citation](#Citation)
+- [Citation](#citation)
 - [License](#license)
 
 ## Introduction
@@ -174,7 +174,7 @@ The gif goes here
 
 ## Carbon (C) metastable polymorphs
 
-    We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_polymorphs” directory.
+We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_polymorphs” directory.
 
 ```
 Add the C_polymorph figure here
