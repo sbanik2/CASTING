@@ -178,13 +178,11 @@ We have also used CASTING to sample metastable polymorphs of Carbon(C). All the 
 
 ```
 Add the C_polymorph figure here
-    ```    
+```    
 
 
 ## Citation
-```
 
-```
         
 ## License
 CASTING is licensed under the MIT License
