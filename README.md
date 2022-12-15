@@ -19,7 +19,7 @@
 &emsp;&emsp;&emsp;&emsp;Fast and accurate prediction of optimal crystal structure, topology, and microstructures is important for accelerating the design and discovery of new materials. Material properties are strongly correlated to the underlying structure and topology – inverse design is emerging as a powerful tool to discover new and increasingly complex materials that meet targeted functionalities. CASTING provides a unified framework for fast, scalable and accurate design & inverse design of materials. </p>
 
 
-<p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/MCTS.png?raw=true" align="center" height="500" width="500" ></a> </p>
+<p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/MCTS.png?raw=true" align="center" height="500" width="600" ></a> </p>
 
 
 
