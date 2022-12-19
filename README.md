@@ -168,7 +168,7 @@ This will extract <number-of-structure-to-extract> number of structures in ascen
 
 An example optimization of Gold (Au) nanocluster is given in "example" directory. We have used CASTING to optimize the already known global minima (Sutton-Chen) of 13 atom Au nanocluster (Icosahedral structure).  Details on additional examples can be found in [put the paper here]
 
-<p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/sutton_chen.gif" align="center" height="300" width="300" ></a> </p>
+<p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/sutton_chen.gif" align="center" height="200" width="200" ></a> </p>
 
 
 ## Carbon metastable polymorphs
