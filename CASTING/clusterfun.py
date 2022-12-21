@@ -50,7 +50,7 @@ def createRandomData(constrains, multiplier=10):
 
     shuffle(species)
 
-    # ----------------Bulk FCC with natoms X multiplier atoms and select clsuter with random walk -----------
+    # ----------------Bulk FCC with natoms X multiplier atoms and select cluster with random walk -----------
 
     maxmin = constrains["r_min"].values.max()
     minmax = constrains["r_max"].values.min()
