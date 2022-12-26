@@ -129,7 +129,7 @@ evaluator = LammpsEvaluator(**lammps_par).evaluate
 
 ```
 
-Finally, Call MCTS with all the hyperparameters added. details of individual hyperparameters for the optimizer can be found here (
+Finally, Call MCTS with all the hyperparameters added. Details of individual hyperparameters for the optimizer can be found here (
 https://doi.org/10.48550/arXiv.2212.1210).
         
  ``` python
