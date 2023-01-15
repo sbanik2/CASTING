@@ -180,10 +180,10 @@ We have also used CASTING to sample metastable polymorphs of Carbon(C). All the 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/MetastableC.png" align="center" height="400" width="500" ></a> </p>
 
 ## Citation
-``
+```
 Banik, S., Loefller, T., Manna, S., Srinivasan, S., Darancet, P., Chan, H., ... & Sankaranarayanan, S. K. (2022). A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery. arXiv preprint arXiv:2212.12106.
 
-``
+```
         
 ## License
 CASTING is licensed under the MIT License
