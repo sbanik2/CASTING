@@ -3,11 +3,11 @@
 <a name="readme-top"></a>
 
 
-
+![Release][release-shield]
 [![License][license-shield]][license-url]
 ![Downloads][download-shield]
 ![Commit][commit-shield]
-[![DOI][DOI-shield]][DOI-url]
+[![Doi][DOI-shield]][DOI-url]
 ![Size][size-shield]
 
 
