@@ -4,11 +4,11 @@
 
 
 
-[![Release][release-shield]]
+![Release][release-shield]
 [![License][license-shield]][license-url]
-[![Downloads][download-shield]]
+![Downloads][download-shield]
 ![Commit][commit-shield]
-[![Size][size-shield]]
+![Size][size-shield]
 [![DOI][DOI-shield]][DOI-url]
 
 
