@@ -35,7 +35,7 @@
 
 ## Introduction
 
-A pseudocode implementation of CASTING framework [DOI](https://doi.org/10.48550/arXiv.2212.12106) for optimization of atomic nanoclusters only. This code uses MCTS (Monte Carlo Tree Search) as base optimizer.<br/> 
+A pseudocode implementation of CASTING framework ([DOI](https://doi.org/10.48550/arXiv.2212.12106)) for optimization of atomic nanoclusters only. This code uses MCTS (Monte Carlo Tree Search) as base optimizer.<br/> 
 <p align="justify">&emsp;&emsp;&emsp;&emsp;Fast and accurate prediction of optimal crystal structure, topology, and microstructures is important for accelerating the design and discovery of new materials. Material properties are strongly correlated to the underlying structure and topology – inverse design is emerging as a powerful tool to discover new and increasingly complex materials that meet targeted functionalities. CASTING provides a unified framework for fast, scalable and accurate prediction & design of materials.</p>
 
 
