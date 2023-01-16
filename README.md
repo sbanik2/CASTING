@@ -225,7 +225,7 @@ CASTING is distributed under MIT License. See `LICENSE` for details.
 [license-url]: https://github.com/sbanik2/CASTING/blob/main/LICENSE
 [download-shield]: https://img.shields.io/github/downloads/sbanik2/CASTING/total
 [commit-shield]:https://img.shields.io/github/last-commit/sbanik2/CASTING
-[size-shield] : https://img.shields.io/github/languages/code-size/sbanik2/CASTING
+[size-shield]: https://img.shields.io/github/languages/code-size/sbanik2/CASTING
 [DOI-shield]: https://img.shields.io/badge/DOI-doi.org/10.48550/arXiv.2212.12106-red
 [DOI-url]: https://doi.org/10.48550/arXiv.2212.12106
     
