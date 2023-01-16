@@ -7,8 +7,7 @@
 [![License][license-shield]][license-url]
 ![Downloads][download-shield]
 ![Commit][commit-shield]
-[![Doi][DOI-shield]][DOI-url]
-![Size][size-shield]
+
 
 
 
