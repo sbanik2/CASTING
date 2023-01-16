@@ -1,4 +1,19 @@
-# CASTING 
+#CASTING 
+
+<a name="readme-top"></a>
+
+
+
+[![Release][release-shield]]
+[![License][license-shield]][license-url]
+[![Downloads][download-shield]]
+[![Commit][commit-shield]]
+[![Size][size-shield]]
+[![DOI][DOI-shield]][DOI-url]
+
+
+
+# 
 
 <p align="justify"> A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework and Materials Discovery</p>
 
@@ -13,6 +28,10 @@
 - [Citation](#citation)
 - [License](#license)
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## Introduction
 
 <p align="justify">A pseudocode implementation of CASTING framework (https://doi.org/10.48550/arXiv.2212.12106) for optimization of atomic nanoclusters only. This code uses MCTS (Monte Carlo Tree Search) as base optimizer.<br/> 
@@ -22,6 +41,7 @@
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/MCTS.png?raw=true" align="center" height="500" width="600" ></a> </p>
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Prerequisites
 This package requires:
@@ -33,6 +53,7 @@ This package requires:
 - [networkx](https://networkx.org/)
 - [ase](https://wiki.fysik.dtu.dk/ase/#)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation
 
@@ -54,6 +75,7 @@ pip install CASTING
 ```
 ***The package requires python lammps binding to run. First, lammps package needs to be downloaded from [LAMMPS download] (https://www.lammps.org/download.html) and compiled. The instructions on python integration can be found here [LAMMPS-Python] (https://docs.lammps.org/Python_install.html).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Running the code
 <p align="justify"> First all the parameters crystal (constrains), LAMMPS parameters (pair style, pair coefficient etc.) and the perturbation parameter need to be set.  The composition is given for e.g., a Au<2>Al<3> as "composition":{"Au":2,"Al:3"}. In a file (for e.g., RunOpt.py) we define, </p>
@@ -164,6 +186,7 @@ python Createstruct.py <path-to-extraction-directory> <number-of-structure-to-ex
 ```
 This will extract <number-of-structure-to-extract> number of structures in ascending order of objective.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Optimization of Gold nanocluster
 
@@ -172,25 +195,38 @@ https://doi.org/10.48550/arXiv.2212.12106)
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/sutton_chen.gif" align="center" height="200" width="200" ></a> </p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Carbon metastable polymorphs
 
-We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_dataset” directory.
+We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_polymorphs” directory.
 
 <p align="center"> <a href="url"><img src="https://github.com/sbanik2/CASTING/blob/main/figs/MetastableC.png" align="center" height="400" width="500" ></a> </p>
 
 ## Citation
 ```
-@article{banik2022continuous,
-  title={A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery},
-  author={Banik, Suvo and Loefller, Troy and Manna, Sukriti and Srinivasan, Srilok and Darancet, Pierre and Chan, Henry and Hexemer, Alexander and Sankaranarayanan, Subramanian KRS},
-  journal={arXiv preprint arXiv:2212.12106},
-  year={2022}
-}
+Banik, S., Loefller, T., Manna, S., Srinivasan, S., Darancet, P., Chan, H., ... & Sankaranarayanan, S. K. (2022). A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery. arXiv preprint arXiv:2212.12106.
 
 ```
+    
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
         
 ## License
-CASTING is licensed under the MIT License
+CASTING is distributed under MIT License. See `LICENSE` for details.
+    
+    
+<p align="right">(<a href="#readme-top">back to top</a>)</p>  
+    
+<!--LINKS -->
 
 
+[release-shield]:https://img.shields.io/github/v/release/sbanik2/CASTING
+[license-shield]: https://img.shields.io/github/license/sbanik2/CASTING
+[license-url]: https://github.com/sbanik2/CASTING/blob/main/LICENSE
+[download-shield]: https://img.shields.io/github/downloads/sbanik2/CASTING/total
+[commit-shield]::https://img.shields.io/github/last-commit/sbanik2/CASTING
+[size-shield] : https://img.shields.io/github/languages/code-size/sbanik2/CASTING
+[DOI-shield]: https://img.shields.io/badge/DOI-doi.org/10.48550/arXiv.2212.12106-red
+[DOI-url]:https://doi.org/10.48550/arXiv.2212.12106
+    
+    
