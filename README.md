@@ -1,4 +1,4 @@
-# CASTING 
+
 
 <a name="readme-top"></a>
 
@@ -13,7 +13,7 @@
 
 
 
-# 
+# CASTING 
 
 <p align="justify"> A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework and Materials Discovery</p>
 
