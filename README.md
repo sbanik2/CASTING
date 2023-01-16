@@ -8,8 +8,9 @@
 [![License][license-shield]][license-url]
 ![Downloads][download-shield]
 ![Commit][commit-shield]
-![Size][size-shield]
 [![DOI][DOI-shield]][DOI-url]
+![Size][size-shield]
+
 
 
 
