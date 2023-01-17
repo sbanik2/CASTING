@@ -63,7 +63,7 @@ This package requires:
 conda env create --name CASTING
 conda activate CASTING
 git clone https://github.com/sbanik2/CASTING.git
-pip install -r requirement.txt
+pip install -r requirements.txt
 python setup.py install
 ```
 
