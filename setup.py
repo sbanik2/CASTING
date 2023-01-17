@@ -8,7 +8,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="CASTING",
-    version="1.0.0",  
+    version="0.1.0",  
     description="A continuous action spce tree search for inverse design",
     author="Suvo Banik",
     author_email="sbanik2@uic.edu", 
