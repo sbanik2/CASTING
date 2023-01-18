@@ -19,6 +19,7 @@ setup(
             "pandas>=1.4.3",
             "pymatgen>=2022.7.25",
             "scipy>=1.8.0",
+            "tqdm>=4.64.0"
     ],
     
     
