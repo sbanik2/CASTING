@@ -178,12 +178,20 @@ Run the code
 python RunOpt.py 
 ```
 
-The optimization produces a "dumpfile.dat" output containing all the crystal parameters and the energy values as the output.  A script “Createstruct.py” for extracting the structure in POSCAR format is given in the “post” directory. To run this
+The optimization produces a "dumpfile.dat" output containing all the crystal parameters and the energy values as the output. To extract the structures in either 'poscar' or 'cif' format, one can use the  'StructureWriter' module.
 
-```
-python Createstruct.py <path-to-extraction-directory> <number-of-structure-to-extract>
-```
-This will extract <number-of-structure-to-extract> number of structures in ascending order of objective.
+ ``` python
+ 
+from CASTING.writer import StructureWriter
+
+num_to_write = 10 # number of stuctures to extract
+writer = StructureWriter("dumpfile.dat",outpath="structures",objfile="energy.dat",file_format="poscar") # "poscar" or "cif"
+writer.write( num_to_write, sort=True) # sort to arrange in increasing order of energy
+ 
+ 
+ ```
+This will extract 'num_to_write' number of structures in ascending order of objective. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
