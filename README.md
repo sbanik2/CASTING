@@ -7,8 +7,9 @@
 [![License][license-shield]][license-url]
 ![Commit][commit-shield]
 ![Size][size-shield]
+[![Downloads](https://static.pepy.tech/badge/casting)](https://pepy.tech/project/casting)
 [![Doi][DOI-shield]][DOI-url]
-<!-- ![Downloads][download-shield] -->
+
 
 
 
