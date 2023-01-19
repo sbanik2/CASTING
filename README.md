@@ -7,7 +7,7 @@
 [![License][license-shield]][license-url]
 ![Commit][commit-shield]
 ![Size][size-shield]
-[![Downloads](https://static.pepy.tech/badge/casting)](https://pepy.tech/project/casting)
+[![Downloads][download-shield]][download-url]
 [![Doi][DOI-shield]][DOI-url]
 
 
@@ -241,7 +241,8 @@ CASTING is distributed under MIT License. See `LICENSE` for details.
 [release-shield]: https://img.shields.io/github/v/release/sbanik2/CASTING
 [license-shield]: https://img.shields.io/github/license/sbanik2/CASTING
 [license-url]: https://github.com/sbanik2/CASTING/blob/main/LICENSE
-[download-shield]: https://img.shields.io/github/downloads/sbanik2/CASTING/total
+[download-shield]: https://static.pepy.tech/badge/casting
+[download-url]: https://pepy.tech/project/casting
 [commit-shield]:https://img.shields.io/github/last-commit/sbanik2/CASTING
 [size-shield]: https://img.shields.io/github/languages/code-size/sbanik2/CASTING
 [DOI-shield]: https://img.shields.io/badge/DOI-doi.org/10.48550/arXiv.2212.12106-red
