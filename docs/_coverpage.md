@@ -2,7 +2,7 @@
 
 ![logo](puzzle.png)
 
-CASTING
+#CASTING
 
 > A Continuous Action Space Tree search for INverse desiGn (CASTING) 
 
