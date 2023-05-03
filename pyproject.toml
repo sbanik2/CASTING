@@ -4,18 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "CASTING"
-version = "0.1.2"
+version = "0.1.3"
 authors = [
   { name="Suvo Banik", email="sbanik2@uic.edu" },
 ]
 dependencies = [
-            "ase>=3.21.1",
-            "networkx>=2.0",
-            "numpy>=1.23.1",
-            "pandas>=1.4.3",
-            "pymatgen>=2022.7.25",
-            "scipy>=1.8.0",
-            "tqdm>=4.64.0"
+                    "ase==3.22.1",
+                    "mendeleev==0.13.1",
+                    "networkx==2.8.4",
+                    "numpy==1.24.3",
+                    "pandas==1.4.4",
+                    "pymatgen==2023.2.22",
+                    "scipy==1.9.1",
+                    "tqdm==4.64.1",
+
 ]
 description = "A continuous action space tree search for inverse design (CASTING)"
 readme = "README.md"

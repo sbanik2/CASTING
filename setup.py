@@ -8,18 +8,20 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="CASTING",
-    version="0.1.2",  
+    version="0.1.3",  
     description="A continuous action spce tree search for inverse design",
     author="Suvo Banik",
     author_email="sbanik2@uic.edu", 
     install_requires=[
-            "ase>=3.21.1",
-            "networkx>=2.0",
-            "numpy>=1.23.1",
-            "pandas>=1.4.3",
-            "pymatgen>=2022.7.25",
-            "scipy>=1.8.0",
-            "tqdm>=4.64.0"
+                    "ase==3.22.1",
+                    "mendeleev==0.13.1",
+                    "networkx==2.8.4",
+                    "numpy==1.24.3",
+                    "pandas==1.4.4",
+                    "pymatgen==2023.2.22",
+                    "scipy==1.9.1",
+                    "tqdm==4.64.1",
+
     ],
     
     
