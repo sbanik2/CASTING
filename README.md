@@ -2,7 +2,7 @@
 
 <a name="readme-top"></a>
 
-![Colab][colab-shield]
+[![colab][colab-shield]][colab-url]
 ![Release][release-shield]
 [![License][license-shield]][license-url]
 ![Commit][commit-shield]
@@ -237,9 +237,8 @@ CASTING is distributed under MIT License. See `LICENSE` for details.
     
 <!--LINKS -->
 
-[colab-shield] : <a target="_blank" href="https://colab.research.google.com/github/sbanik2/CASTING/blob/main/notebooks/Au_example_Ase.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+[colab-shield]: https://colab.research.google.com/assets/colab-badge.svg
+[colab-url]: https://colab.research.google.com/github/sbanik2/CASTING/blob/main/notebooks/Au_example_Ase.ipynb
 [release-shield]: https://img.shields.io/github/v/release/sbanik2/CASTING
 [license-shield]: https://img.shields.io/github/license/sbanik2/CASTING
 [license-url]: https://github.com/sbanik2/CASTING/blob/main/LICENSE
