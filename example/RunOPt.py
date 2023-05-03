@@ -11,7 +11,7 @@
 from CASTING.utilis import r_datafame,get_lattice
 from CASTING.MCTS import MCTS
 from CASTING.clusterfun import createRandomData
-from CASTING.lammpsEvaluate import LammpsEvaluator
+from CASTING.lammpsEvaluate import AseEamEvaluator
 from CASTING.perturb import perturbate
 
 
