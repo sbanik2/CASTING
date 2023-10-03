@@ -209,6 +209,11 @@ An example optimization of Gold (Au) nanocluster is given in "example" directory
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Launch in Colab
+
+An example optimization of a Gold (Au) - Sutton-Chen nanocluster in the form of a Jupyter notebook has been provided in the `notebooks` directory. This can be launched in Google Colab using the [link](https://colab.research.google.com/github/sbanik2/CASTING/blob/main/notebooks/Au_example_Ase.ipynb).
+
 ## Carbon metastable polymorphs
 
 We have also used CASTING to sample metastable polymorphs of Carbon(C). All the structures are then further relaxed with DFT. The unique polymorphs and their corresponding DFT energies have been provided in “C_polymorphs” directory.
