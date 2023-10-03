@@ -246,7 +246,7 @@ CASTING is distributed under MIT License. See `LICENSE` for details.
 [download-url]: https://pepy.tech/project/casting
 [commit-shield]:https://img.shields.io/github/last-commit/sbanik2/CASTING
 [size-shield]: https://img.shields.io/github/languages/code-size/sbanik2/CASTING
-[DOI-shield]: https://img.shields.io/badge/DOI-doi.org/10.48550/arXiv.2212.12106-red
+[DOI-shield]: https://img.shields.io/badge/DOI:https://doi.org/10.1038/s41524-023-01128-y-8A2BE2
 [DOI-url]: https://doi.org/10.48550/arXiv.2212.12106
     
     
