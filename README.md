@@ -219,12 +219,17 @@ We have also used CASTING to sample metastable polymorphs of Carbon(C). All the 
 
 ## Citation
 ```
-@article{banik2022continuous,
-  title={A Continuous Action Space Tree search for INverse desiGn (CASTING) Framework for Materials Discovery},
-  author={Banik, Suvo and Loefller, Troy and Manna, Sukriti and Srinivasan, Srilok and Darancet, Pierre and Chan, Henry and Hexemer, Alexander and Sankaranarayanan, Subramanian KRS},
-  journal={arXiv preprint arXiv:2212.12106},
-  year={2022}
+@article{banik2023continuous,
+  title={A continuous action space tree search for INverse desiGn (CASTING) framework for materials discovery},
+  author={Banik, Suvo and Loefller, Troy and Manna, Sukriti and Chan, Henry and Srinivasan, Srilok and Darancet, Pierre and Hexemer, Alexander and Sankaranarayanan, Subramanian KRS},
+  journal={npj Computational Materials},
+  volume={9},
+  number={1},
+  pages={1--16},
+  year={2023},
+  publisher={Nature Publishing Group}
 }
+
 ```
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
