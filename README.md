@@ -210,9 +210,9 @@ An example optimization of Gold (Au) nanocluster is given in "example" directory
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Launch in Colab
+### Launch in Colab
 
-An example optimization of a Gold (Au) - Sutton-Chen nanocluster in the form of a Jupyter notebook has been provided in the `notebooks` directory. This can be launched in Google Colab using the [link](https://colab.research.google.com/github/sbanik2/CASTING/blob/main/notebooks/Au_example_Ase.ipynb).
+An example optimization of a Gold (Au) - Sutton-Chen nanocluster in the form of a Jupyter notebook that does not require LAMMPS Python binding has been provided in the `notebooks` directory. This can be launched in Google Colab using the [link](https://colab.research.google.com/github/sbanik2/CASTING/blob/main/notebooks/Au_example_Ase.ipynb).
 
 ## Carbon metastable polymorphs
 
